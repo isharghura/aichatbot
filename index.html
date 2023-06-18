@@ -11,6 +11,44 @@
 </head>
 
 <body>
+    <!--Chat window-->
+    <div class="chat-window-collapse">
+        <button id="chat-button" type="button" class="collapsible">Chatbot
+            <i id="chat-icon" style="color: white;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <div class="outer-container">
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp">
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </h5>
+                    </div>
+
+                    <!--user input-->
+                    <div class="chat-bar-input">
+                        <div id="userInput">
+                            <input type="text" id="textInput" class="input-box" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                onclick="heartButton()"></i>
+                            <i id="chat-icon" style="color: black;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="static/scripts/chat.js"></script>
     <script src="static/scripts/responses.js"></script>
