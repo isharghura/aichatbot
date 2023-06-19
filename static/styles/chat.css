@@ -1,0 +1,18 @@
+#app{
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.title h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.user input{
+    bottom:0;
+    border: none;
+}
