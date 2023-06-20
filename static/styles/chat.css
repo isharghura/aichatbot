@@ -1,18 +1,44 @@
 #app{
     align-items: center;
     width: 50%;
-    height: 100%;
+    height: auto;
     margin: auto;
-    border: 1px solid black;
 }
 
-.title h1{
-    text-align: center;
-    font-size: 36px;
-    font-weight: bolder;
+.chatbot-profile{
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chatbot-profile i{
+    border: 1px solid black;
+    border-radius: 20%;
 }
 
 .user input{
-    bottom:0;
-    border: none;
+    position: fixed;
+    bottom:50px;
+    border-radius: 20px;
+    width: 50%;
+    height: 3%;
+    padding: 0px 15px;
+    background-color: rgb(172, 226, 255);
+    color: black;
+}
+
+.user input::placeholder{
+    color: black;
+}
+
+.user i{
+    position: fixed;
+    bottom: 58px;
+    padding: 0px 15px;
+    left: 74%;
+    color: rgb(255, 255, 255);
+}
+
+.user i:hover{
+    color: gray;
 }
