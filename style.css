@@ -49,8 +49,8 @@ body {
     width: 40%;
     padding: 0px 15px;
     background-color: rgb(32, 32, 32);
-    color: rgb(255, 255, 255);
-    border: 0.2px solid white;
+    color: rgb(187, 187, 187);
+    border: 2px solid rgb(105, 105, 105);
     position: fixed;
     bottom: 30px;
     height: 40px;
