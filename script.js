@@ -1,14 +1,22 @@
 const userMsg = document.getElementById("userText");
-const list = document.getElementById("user-msgs");
+const botmsgs = document.getElementById("bot-msgs");
+const usermsgs = document.getElementById("msgs");
 
 function addMsg() {
     if (userMsg.value === '') {
         //do nothing
     }
     else {
-        let msg = document.createElement("li");
-        msg.innerHTML = userMsg.value;
-        list.appendChild(msg);
+        let usrmsg = document.createElement("li");
+        let botmsg = document.createElement("li");
+        usrmsg.id="user-msg";
+        botmsg.id="bot-msg";
+
+        usrmsg.innerHTML = userMsg.value;
+        botmsg.innerHTML="blah";
+
+        usermsgs.appendChild(usrmsg);
+        botmsgs.appendChild(botmsg);
     }
     userMsg.value='';
 }
