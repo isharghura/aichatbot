@@ -8,14 +8,34 @@ html {
 body {
     margin: 0 auto;
     width: 100%;
-    height: 100%;
+    height: 89%;
     background-color: rgb(0, 0, 0);
     overflow-x: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 #app {
     width: 50%;
-    height: 100%;
+    height: 80%;
     margin: auto;
     background-color: transparent;
 }
@@ -39,11 +59,24 @@ body {
     font-weight: 1000;
 }
 
+.box {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0;
+}
+
 .box ul li {
     color: rgb(187, 187, 187);
     font-size: 30px;
     font-weight: 500;
     list-style: none;
+    margin-bottom: 10px;
 }
 
 #user-msgs {
@@ -51,13 +84,13 @@ body {
 }
 
 #user-msgs li {
-    padding: 10px;
+    padding: 10px 20px;
     background: blue;
     border: 1px solid black;
     border-radius: 30px;
-    border-width: 5px;
     text-align: right;
-    display: block;
+    display: inline-flex;
+    min-width: max-content;
 }
 
 .user {
@@ -65,7 +98,10 @@ body {
     width: 50%;
     height: 10%;
     background-color: rgb(43, 43, 43);
-    bottom: 0px;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 .user input {
@@ -75,7 +111,7 @@ body {
     background-color: rgb(32, 32, 32);
     color: rgb(187, 187, 187);
     border: 2px solid rgb(105, 105, 105);
-    position: fixed;
+    position: absolute;
     bottom: 30px;
     height: 40px;
     margin: auto;
@@ -83,6 +119,7 @@ body {
     right: 0;
     font-size: 20px;
 }
+
 
 .user input::placeholder {
     font-size: 20px;
