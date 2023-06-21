@@ -19,8 +19,10 @@ function addMsg() {
 document.addEventListener('keydown', (event) => {
     var whichKey = event.key;
     if (whichKey === 'Enter') {
+        event.preventDefault();
         addMsg();
         var boxElement = document.querySelector('.box');
         boxElement.scrollTop = boxElement.scrollHeight;
+        userText.focus();
     }
 })
