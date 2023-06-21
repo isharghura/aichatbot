@@ -5,6 +5,7 @@ let count = 0;
 function addMsg() {
     if (userInput.value === '') {
         //do nothing
+        count=0;
     }
     else {
         let usrmsg = document.createElement("li");
@@ -13,14 +14,21 @@ function addMsg() {
         botmsg.id = "bot-msg";
 
         usrmsg.innerHTML = userInput.value;
-        botmsg.innerHTML = "blah";
+        botmsg.innerHTML = "Hello!";
 
         msgs.appendChild(usrmsg);
         userInput.value = '';
-        if (count === 2) {
+        if (count === 1) {
             msgs.appendChild(botmsg);
-            count=0;
+            count = 0;
         }
+
+        setTimeout(function () {
+            usrmsg.classList.add("show");
+        }, 10);
+        setTimeout(function () {
+            botmsg.classList.add("show");
+        }, 500);
     }
 }
 

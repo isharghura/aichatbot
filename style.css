@@ -69,6 +69,8 @@ body {
     font-weight: 500;
     list-style: none;
     margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #msgs {
@@ -91,6 +93,10 @@ body {
     border-radius: 30px;
     text-align: left;
     margin-right: auto;
+}
+
+#msgs li.show {
+    opacity: 1;
 }
 
 .user {
