@@ -17,8 +17,9 @@ function addMsg() {
 
         msgs.appendChild(usrmsg);
         userInput.value = '';
-        if (count === 5) {
+        if (count === 2) {
             msgs.appendChild(botmsg);
+            count=0;
         }
     }
 }
