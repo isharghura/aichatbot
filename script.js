@@ -100,7 +100,7 @@ function getBotResponse(input) {
         return 'According to my calculations, eggs came first.';
     }
     else if (input === 'What time is it?') {
-        return 'It is 14:23pm.';
+        return 'It is 18:00.';
     }
 
     if (input === 'hello') {
