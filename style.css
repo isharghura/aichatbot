@@ -26,7 +26,7 @@ body {
 }
 
 #app {
-    width: 50%;
+    width: 90%;
     height: 80%;
     margin: auto;
     background-color: transparent;
@@ -55,6 +55,7 @@ body {
     height: 114%;
     overflow-y: auto;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .box ul {
@@ -72,15 +73,17 @@ body {
     margin-bottom: 10px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    word-wrap:break-word;
+    word-wrap: break-word;
     max-width: 80%;
 }
 
-#chat-timestamp{
+#chat-timestamp {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
     color: white;
     text-align: center;
     margin: auto;
-    margin-top: 30px;
 }
 
 #msgs {
@@ -125,7 +128,7 @@ body {
 
 .user input {
     border-radius: 20px;
-    width: 40%;
+    width: 100%;
     padding: 0px 15px;
     background-color: rgb(71, 71, 71);
     color: white;
@@ -144,4 +147,26 @@ body {
     font-size: 20px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        overflow-x: hidden !important;
+    }
+
+    #app {
+        width: 90%;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .user{
+        width: 80%;
+    }
+
+    .user input {
+        width: 100%;
+    }
 }
