@@ -20,15 +20,19 @@ function addMsg() {
     }
 }
 
+function scrollDown(){
+    var boxElement = document.querySelector('.box');
+    boxElement.scrollTop = boxElement.scrollHeight;
+    userInput.focus();
+}
+
 document.addEventListener('keydown', (event) => {
     var whichKey = event.key;
     if (whichKey === 'Enter') {
         event.preventDefault();
         addMsg();
 
-        var boxElement = document.querySelector('.box');
-        boxElement.scrollTop = boxElement.scrollHeight;
-        userInput.focus();
+        scrollDown();
     }
 })
 
@@ -74,6 +78,7 @@ function intents(userText) {
 
     setTimeout(function () {
         botmsg.classList.add("show");
+        scrollDown();
     }, 500);
 }
 
