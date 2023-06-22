@@ -32,21 +32,21 @@ document.addEventListener('keydown', (event) => {
 })
 
 function getTime() {
-    let today=new Date();
-    hours=today.getHours();
-    minutes=today.getMinutes();
+    let today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
 
-    if(hours < 10){
+    if (hours < 10) {
         hours = "0" + hours;
     }
-    if(minutes < 10){
+    if (minutes < 10) {
         minutes = "0" + minutes;
     }
     let time = hours + ":" + minutes;
     return time;
 }
 
-function firstBotMessage(){
+function firstBotMessage() {
     let botmsg = document.createElement("li");
     botmsg.id = "bot-msg";
     botmsg.innerHTML = "Hi! How can I help you?";
@@ -57,6 +57,8 @@ function firstBotMessage(){
         botmsg.classList.add("show");
     }, 500);
 
-    let time=getTime();
-    $("#chat-timestamp").append(time);
+    let time = document.getElementById("chat-timestamp");
+    time.innerHTML = getTime();
 }
+
+firstBotMessage();
