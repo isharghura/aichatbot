@@ -52,7 +52,7 @@ body {
 }
 
 .box {
-    height: 800px;
+    height: 114%;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -73,6 +73,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     word-wrap:break-word;
+    max-width: 80%;
 }
 
 #chat-timestamp{
