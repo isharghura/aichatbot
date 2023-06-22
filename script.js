@@ -84,22 +84,32 @@ function intents(userText) {
 
 function getBotResponse(input) {
     if (input === 'rock') {
-        return 'paper';
+        return 'Paper';
     }
     else if (input === 'paper') {
-        return 'scissors';
+        return 'Scissors';
     }
     else if (input === 'scissors') {
-        return 'rock';
+        return 'Rock';
+    }
+
+    if (input === 'How is the weather today?') {
+        return 'Splendid. Today it is a warm and sunny day!';
+    }
+    else if (input === 'What came first, the chicken or the egg?') {
+        return 'According to my calculations, eggs came first.';
+    }
+    else if (input === 'What time is it?') {
+        return 'It is 14:23pm.';
     }
 
     if (input === 'hello') {
-        return 'hello!';
+        return 'Greetings!';
     }
     else if (input === 'bye') {
-        return 'goodbye!';
+        return 'Farewell!';
     }
     else {
-        return 'try asking something else!';
+        return 'Try asking me something else!';
     }
 }
