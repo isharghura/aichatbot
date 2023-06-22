@@ -15,6 +15,7 @@ function addMsg() {
 
         setTimeout(function () {
             usrmsg.classList.add("show");
+            intents(usrmsg.innerHTML);
         }, 10);
     }
 }
@@ -62,3 +63,38 @@ function firstBotMessage() {
 }
 
 firstBotMessage();
+
+function intents(userText) {
+    let botResponse = getBotResponse(userText);
+    let botmsg = document.createElement("li");
+    botmsg.id = "bot-msg";
+    botmsg.innerHTML=botResponse;
+
+    msgs.appendChild(botmsg);
+
+    setTimeout(function () {
+        botmsg.classList.add("show");
+    }, 500);
+}
+
+function getBotResponse(input) {
+    if (input === 'rock') {
+        return 'paper';
+    }
+    else if (input === 'paper') {
+        return 'scissors';
+    }
+    else if (input === 'scissors') {
+        return 'rock';
+    }
+
+    if (input === 'hello') {
+        return 'hello!';
+    }
+    else if (input === 'bye') {
+        return 'goodbye!';
+    }
+    else {
+        return 'try asking something else!';
+    }
+}
