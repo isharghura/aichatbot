@@ -52,8 +52,9 @@ body {
 }
 
 .box {
-    height: 114%;
+    height: 800px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .box ul {
@@ -71,6 +72,7 @@ body {
     margin-bottom: 10px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    word-wrap:break-word;
 }
 
 #chat-timestamp{
@@ -91,6 +93,8 @@ body {
     border-radius: 30px;
     text-align: left;
     margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #bot-msg {
@@ -100,6 +104,8 @@ body {
     border-radius: 30px;
     text-align: left;
     margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #msgs li.show {
