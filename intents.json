@@ -1,0 +1,19 @@
+{
+    "intents": [
+        {
+            "tag": "hello",
+            "patterns": ["hello", "hey", "hi", "good day", "greetings", "what's up?", "how is it going?"],
+            "responses": ["Hello!", "Hey!", "What can I do for you?"]
+        },
+        {
+            "tag": "bye",
+            "patterns": ["bye", "goodbye", "cya", "see you later", "later", "i am leaving", "ciao", "see ya"],
+            "responses": ["See you again soon!", "Talk to you later!", "Goodbye!"]
+        },
+        {
+            "tag": "weather",
+            "patterns": ["what's the weather like today?", "how is the weather?", "weather?", "how is it outside?", "is the weather nice?", "what's it like outside?", "is it hot?", "is it cold?"],
+            "responses": ["It is a lovely and sunny day!", "It is pouring with rain.", "It is bucketing, bring a raincoat."]
+        }
+    ]
+}
