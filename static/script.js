@@ -113,3 +113,17 @@ function getBotResponse(input) {
         return 'Try asking me something else!';
     }
 }
+
+var inputVariable = 'Hello, Python!';
+
+var xhr = new XMLHttpRequest();
+xhr.open('POST', '/process', true);
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        var responseMessage = response.response;
+        document.getElementById('responseDiv').innerHTML = responseMessage;
+    }
+};
+xhr.send('input_variable=' + encodeURIComponent(inputVariable));
