@@ -45,9 +45,9 @@ def predict_class(sentence):
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
-    for i in list_of_intents:
-        if i in list_of_intents:
-            result = random.choice(i['responses'])
+    for intent in list_of_intents:
+        if intent['tag'] == tag:
+            result = random.choice(intent['responses'])
             break
     return result
 
