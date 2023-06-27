@@ -2,18 +2,103 @@
     "intents": [
         {
             "tag": "hello",
-            "patterns": ["hello", "hey", "hi", "good day", "greetings", "what's up?", "how is it going?"],
+            "patterns": ["hello", "hey", "hi", "good day", "greetings", "what's up?", "how is it going?", "yo"],
             "responses": ["Hello!", "Hey!", "What can I do for you?"]
         },
         {
             "tag": "bye",
-            "patterns": ["bye", "goodbye", "cya", "see you later", "later", "i am leaving", "ciao", "see ya"],
+            "patterns": ["bye", "goodbye", "cya", "see you later", "later", "i am leaving", "ciao", "see you"],
             "responses": ["See you again soon!", "Talk to you later!", "Goodbye!"]
         },
         {
             "tag": "weather",
             "patterns": ["what's the weather like today?", "how is the weather?", "weather?", "how is it outside?", "is the weather nice?", "what's it like outside?", "is it hot?", "is it cold?"],
             "responses": ["It is a lovely and sunny day!", "It is pouring with rain.", "It is bucketing, bring a raincoat."]
+        },
+        {
+            "tag": "name",
+            "patterns": ["what's your name?", "who are you?", "do you have a name?"],
+            "responses": ["I'm an AI chatbot.", "You can call me ChatBot."]
+        },
+        {
+            "tag": "help",
+            "patterns": ["help", "can you help me?", "I need assistance"],
+            "responses": ["Of course! What do you need help with?", "I'm here to assist you. How can I help?"]
+        },
+        {
+            "tag": "joke",
+            "patterns": ["tell me a joke", "make me laugh", "I want to hear a funny joke"],
+            "responses": ["Why don't scientists trust atoms? Because they make up everything!", "Why did the scarecrow win an award? Because he was outstanding in his field!"]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["thank you", "thanks a lot", "appreciate it"],
+            "responses": ["You're welcome!", "Glad I could help!", "No problem!"]
+        },
+        {
+            "tag": "age",
+            "patterns": ["how old are you?", "what's your age?", "when were you born?"],
+            "responses": ["I am an AI chatbot, so I don't have an age.", "Age is just a number for me!"]
+        },
+        {
+            "tag": "restaurant",
+            "patterns": ["recommend a restaurant", "where should I eat?", "any good restaurants nearby?", "I'm hungry"],
+            "responses": ["There are many great restaurants in the area. What type of cuisine are you in the mood for?", "Sure! What kind of cuisine do you prefer?"]
+        },
+        {
+            "tag": "music",
+            "patterns": ["recommend some music", "what's your favorite genre?", "play some music", "any good songs?"],
+            "responses": ["I enjoy various genres of music. What kind of music are you interested in?", "Sure! What genre of music do you prefer?"]
+        },
+        {
+            "tag": "book",
+            "patterns": ["recommend a book", "what's a good book to read?", "any book suggestions?", "I need a book recommendation"],
+            "responses": ["There are many great books out there. What genre or author do you prefer?", "Sure! What type of books do you enjoy reading?"]
+        },
+        {
+            "tag": "movie",
+            "patterns": ["recommend a movie", "what's a good movie to watch?", "any movie suggestions?", "I need a movie recommendation"],
+            "responses": ["There are many great movies to choose from. What genre or actor/actress do you prefer?", "Sure! What type of movies do you enjoy watching?"]
+        },
+        {
+            "tag": "time",
+            "patterns": ["what time is it?", "do you know the time?", "current time please", "what's the time now?"],
+            "responses": ["The current time is 9:00 AM.", "It is currently 3:30 PM."]
+        },
+        {
+            "tag": "news",
+            "patterns": ["what's the latest news?", "any interesting news?", "tell me some news", "what's happening in the world?"],
+            "responses": ["Here are some recent news headlines: ...", "In the news today: ..."]
+        },
+        {
+            "tag": "sports",
+            "patterns": ["what's your favorite sport?", "tell me about a sports event", "any sports news?", "do you play any sports?"],
+            "responses": ["I enjoy watching various sports. Which sport are you interested in?", "Sure! What sports-related information are you looking for?"]
+        },
+        {
+            "tag": "technology",
+            "patterns": ["tell me about the latest technology", "any tech news?", "recommend a gadget", "what's your favorite tech device?"],
+            "responses": ["Technology is constantly evolving. Is there any specific tech topic you want to know about?", "Sure! What aspect of technology are you interested in?"]
+        },
+        {
+            "tag": "travel",
+            "patterns": ["recommend a travel destination", "where should I travel?", "any travel tips?", "tell me about a famous landmark"],
+            "responses": ["There are countless amazing travel destinations. What type of location or experience are you seeking?", "Sure! What kind of travel information are you looking for?"]
+        },
+        {
+            "tag": "food",
+            "patterns": ["recommend a restaurant", "what's your favorite cuisine?", "any good food places?", "tell me about a dish"],
+            "responses": ["Food is a delightful topic! What type of cuisine or specific dish are you interested in?", "Sure! What kind of food recommendations are you looking for?"]
+        },
+        {
+            "tag": "health",
+            "patterns": ["give me some health tips", "tell me about a healthy lifestyle", "any fitness recommendations?", "what's your favorite exercise?"],
+            "responses": ["Health is important! What specific health-related topic are you interested in? (e.g., nutrition, fitness, mental well-being)", "Sure! What particular aspect of health are you seeking information about?"]
+        },
+        {
+            "tag": "career",
+            "patterns": ["give me career advice", "tell me about a profession", "any job search tips?", "what's your dream job?"],
+            "responses": ["Careers are important for personal growth! What specific aspect of careers are you interested in? (e.g., job search, career development, entrepreneurship)", "Sure! What specific information or advice are you seeking in the career domain?"]
         }
     ]
 }
