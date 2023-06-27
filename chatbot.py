@@ -49,6 +49,8 @@ def get_response(intents_list, intents_json):
         if intent['tag'] == tag:
             result = random.choice(intent['responses'])
             break
+    else:
+        result = "I'm sorry, I didn't understand that..."
     return result
 
 print("Running!")
