@@ -52,9 +52,3 @@ def get_response(intents_list, intents_json):
     return result
 
 print("Running!")
-
-while True: 
-    message=input("Type here: ")
-    ints=predict_class(message)
-    res = get_response(ints, intents)
-    print(res)

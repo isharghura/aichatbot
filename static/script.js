@@ -4,8 +4,7 @@ const msgs = document.getElementById("msgs");
 function addMsg() {
     if (userInput.value === '') {
         //do nothing
-    }
-    else {
+    } else {
         let usrmsg = document.createElement("li");
         usrmsg.id = "user-msg";
         usrmsg.innerHTML = userInput.value;
@@ -15,12 +14,12 @@ function addMsg() {
 
         setTimeout(function () {
             usrmsg.classList.add("show");
-            intents(usrmsg.innerHTML);
+            sendUserInput(usrmsg.innerHTML);
         }, 10);
     }
 }
 
-function scrollDown(){
+function scrollDown() {
     var boxElement = document.querySelector('.box');
     boxElement.scrollTop = boxElement.scrollHeight;
     userInput.focus();
@@ -34,7 +33,7 @@ document.addEventListener('keydown', (event) => {
 
         scrollDown();
     }
-})
+});
 
 function getTime() {
     let today = new Date();
@@ -68,11 +67,24 @@ function firstBotMessage() {
 
 firstBotMessage();
 
-function intents(userText) {
-    let botResponse = getBotResponse(userText);
+function sendUserInput(input) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/process', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var responseMessage = response.response;
+            displayBotResponse(responseMessage);
+        }
+    };
+    xhr.send('input_variable=' + encodeURIComponent(input));
+}
+
+function displayBotResponse(response) {
     let botmsg = document.createElement("li");
     botmsg.id = "bot-msg";
-    botmsg.innerHTML=botResponse;
+    botmsg.innerHTML = response;
 
     msgs.appendChild(botmsg);
 
@@ -81,49 +93,3 @@ function intents(userText) {
         scrollDown();
     }, 500);
 }
-
-function getBotResponse(input) {
-    if (input === 'rock') {
-        return 'Paper';
-    }
-    else if (input === 'paper') {
-        return 'Scissors';
-    }
-    else if (input === 'scissors') {
-        return 'Rock';
-    }
-
-    if (input === 'How is the weather today?') {
-        return 'Splendid. Today it is a warm and sunny day!';
-    }
-    else if (input === 'What came first, the chicken or the egg?') {
-        return 'According to my calculations, eggs came first.';
-    }
-    else if (input === 'What time is it?') {
-        return 'It is 18:00.';
-    }
-
-    if (input === 'hello') {
-        return 'Greetings!';
-    }
-    else if (input === 'bye') {
-        return 'Farewell!';
-    }
-    else {
-        return 'Try asking me something else!';
-    }
-}
-
-var inputVariable = 'Hello, Python!';
-
-var xhr = new XMLHttpRequest();
-xhr.open('POST', '/process', true);
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        var response = JSON.parse(xhr.responseText);
-        var responseMessage = response.response;
-        document.getElementById('responseDiv').innerHTML = responseMessage;
-    }
-};
-xhr.send('input_variable=' + encodeURIComponent(inputVariable));
