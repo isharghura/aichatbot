@@ -1,15 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 import json
 
-import secrets
-secret_key = secrets.token_hex(16)
-
 import chatbot
 intents = json.loads(open('intents.json').read())
 
 app = Flask(__name__)
-app.secret_key=secret_key
-
 
 @app.route("/")
 def index():
