@@ -1,7 +1,7 @@
 {
   "name": "isharghura-aichatbot",
   "scripts":{
-    "start": "waitress-serve --port 5000 app:app"
+    "start": "python -m waitress-serve --port 5000 app:app"
   },
   "dependencies": {
     "jquery": "^3.7.0"
