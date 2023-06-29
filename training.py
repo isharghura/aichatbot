@@ -4,15 +4,15 @@ import pickle
 import numpy as np
 
 import nltk
-
-nltk.download("wordnet")
-nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow import keras
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
+
+nltk.download("wordnet")
+nltk.download('punkt')
 
 lemmatizer = WordNetLemmatizer()
 
