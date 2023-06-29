@@ -1,4 +1,8 @@
 {
+  "name": "isharghura-aichatbot",
+  "scripts"{
+    "start": "waitress-serve --port $PORT app:app"
+  },
   "dependencies": {
     "jquery": "^3.7.0"
   }
