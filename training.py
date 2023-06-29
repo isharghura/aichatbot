@@ -6,6 +6,7 @@ import numpy as np
 import nltk
 
 nltk.download("wordnet")
+nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow import keras

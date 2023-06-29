@@ -5,6 +5,7 @@ import numpy as np
 
 import nltk
 from nltk.stem import WordNetLemmatizer
+nltk.download('punkt')
 
 from tensorflow import keras
 from keras.models import load_model
