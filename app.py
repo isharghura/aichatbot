@@ -2,9 +2,11 @@ from flask import Flask, render_template, request, jsonify
 import json
 
 import chatbot
-intents = json.loads(open('intents.json').read())
 
-app = Flask(__name__,  static_url_path='/static')
+intents = json.loads(open("intents.json").read())
+
+app = Flask(__name__, static_url_path="/static")
+
 
 @app.route("/")
 def index():
@@ -23,6 +25,8 @@ def process():
 
     return jsonify({"response": response})
 
+
 if __name__ == "__main__":
     from waitress import serve
-    serve(app, host='0.0.0.0', port=5000)
+
+    serve(app, host="0.0.0.0", port=5000)
