@@ -53,7 +53,7 @@ def get_response(intents_list, intents_json):
             result = random.choice(intent['responses'])
             break
     else:
-        result = "I'm sorry, I didn't understand that..."
+        result = "I'm sorry, I didn't understand that, ask me something else!"
     return result
 
 print("Running!")
