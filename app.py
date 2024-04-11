@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 import json
+import sys
 
-import chatbot
+sys.path.append("../chatbot")
+from chatbot import chatbot
 
 intents = json.loads(open("intents.json").read())
 
