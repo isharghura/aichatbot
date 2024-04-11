@@ -4,13 +4,13 @@ This chatbot is live [here](https://isharghura-aichatbot.onrender.com) - it may 
 
 ### What, how, why?
 
-An Intelligent AI Chatbot that attemps to mimic human conversation
+- An Intelligent AI Chatbot that attemps to mimic human conversation
 
-Trained the chatbot model by feeing it a curated list of patterns associated with corresponding tags and responses
+- Trained the chatbot model by feeing it a curated list of patterns associated with corresponding tags and responses
 
-Developed in Pythona and built using TensorFlow and Keras
+- Developed in Python and built using TensorFlow and Keras
 
-Aims to offer 24/7 support for users, whether it be asking the time, to tell a joke, or even career advice
+- Aims to offer 24/7 support for users, whether it be asking the time, to tell a joke, or even career advice
 
 ### Steps to run locally
 1. Clone this GitHub repo
