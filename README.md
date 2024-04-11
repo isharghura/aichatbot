@@ -6,7 +6,7 @@ This chatbot is live [here](https://isharghura-aichatbot.onrender.com) - it may 
 
 - An Intelligent AI Chatbot that attemps to mimic human conversation
 
-- Trained the chatbot model by feeing it a curated list of patterns associated with corresponding tags and responses
+- Trained the chatbot model by feeding it a curated list of patterns associated with corresponding tags and responses
 
 - Developed in Python and built using TensorFlow and Keras
 
