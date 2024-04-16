@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, jsonify
 import json
 import sys
+import os
 
 sys.path.append("../chatbot")
 from chatbot import chatbot
 
-intents = json.loads(open("intents.json").read())
+with open(os.path.join("data", "intents.json"), "r") as file:
+    intents = json.load(file)
 
 app = Flask(__name__, static_url_path="/static")
 

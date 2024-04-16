@@ -14,7 +14,8 @@ nltk.download('punkt')
 nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
+with open(os.path.join("data", "intents.json"), "r") as file:
+    intents = json.load(file)
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))

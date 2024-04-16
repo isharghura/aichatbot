@@ -17,7 +17,8 @@ nltk.download("punkt")
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open("intents.json").read())
+with open(os.path.join("data", "intents.json"), "r") as file:
+    intents = json.load(file)
 
 words = []
 classes = []
