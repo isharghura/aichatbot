@@ -2,8 +2,38 @@
     "intents": [
         {
             "tag": "hello",
-            "patterns": ["hello", "hey", "hi", "good day", "greetings", "what's up?", "how is it going?", "yo","how are you doing"],
-            "responses": ["Hello!", "Hey!", "What can I do for you?"]
+            "patterns": [
+                "hello",
+                "hey",
+                "hi",
+                "good day",
+                "greetings",
+                "what's up?",
+                "yo"
+            ],
+            "responses": [
+                "Hello!",
+                "Hey!",
+                "What can I do for you?"
+            ]
+        },
+        {
+            "tag": "wellbeing_check",
+            "patterns": [
+                "How are you feeling today?",
+                "Are you doing okay?",
+                "you good?",
+                "all well?",
+                "how's your day going?",
+                "how's your mood today?",
+                "are you feeling alright?",
+                "how are you holding up?"
+            ],
+            "responses": [
+                "I'm great! How are you?",
+                "I am well, thank you!",
+                "Feelin' alright"
+            ]
         },
         {
             "tag": "bye",
