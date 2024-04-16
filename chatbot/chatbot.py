@@ -17,7 +17,8 @@ lemmatizer = WordNetLemmatizer()
 with open(os.path.join("data", "intents.json"), "r") as file:
     intents = json.load(file)
 
-words = pickle.load(open('words.pkl', 'rb'))
+with open(os.path.join("data", "words.pkl"), "rb") as file:
+    words = pickle.load(file)
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model(os.path.join("models", "chatbotmodel.h5"))
 

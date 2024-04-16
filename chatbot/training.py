@@ -42,7 +42,8 @@ words = sorted(set(words))
 classes = sorted(set(classes))
 
 # Serializes words and classes
-pickle.dump(words, open("words.pkl", "wb"))
+with open(os.path.join("data", "words.pkl"), "wb") as file:
+    pickle.dump(words, file)
 pickle.dump(classes, open("classes.pkl", "wb"))
 
 # Template for target output during creation of the training data
