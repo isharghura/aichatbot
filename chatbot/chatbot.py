@@ -19,7 +19,8 @@ with open(os.path.join("data", "intents.json"), "r") as file:
 
 with open(os.path.join("data", "words.pkl"), "rb") as file:
     words = pickle.load(file)
-classes = pickle.load(open('classes.pkl', 'rb'))
+with open(os.path.join("data", "classes.pkl"), "rb") as file:
+    classes = pickle.load(file)
 model = load_model(os.path.join("models", "chatbotmodel.h5"))
 
 # Tokenizes and lemmatizes a given sentence, easier for model to recognize patterns
