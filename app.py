@@ -11,12 +11,12 @@ with open(os.path.join("data", "intents.json"), "r") as file:
 
 app = Flask(__name__, static_url_path="/static")
 
-
+# Returns index.html when the root URL is accessed
 @app.route("/")
 def index():
     return render_template("index.html")
 
-
+# Sends a response back to the user's message
 @app.route("/process", methods=["POST"])
 def process():
     input_data = request.form.get("input_variable")
@@ -28,7 +28,6 @@ def process():
     response = chatbot.get_response(ints, intents)
 
     return jsonify({"response": response})
-
 
 if __name__ == "__main__":
     from waitress import serve
