@@ -2,6 +2,7 @@ import random
 import json
 import pickle
 import numpy as np
+import os
 
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -17,7 +18,7 @@ intents = json.loads(open('intents.json').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbotmodel.h5')
+model = load_model(os.path.join("models", "chatbotmodel.h5"))
 
 # Tokenizes and lemmatizes a given sentence, easier for model to recognize patterns
 def clean_up_sentence(sentence):

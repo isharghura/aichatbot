@@ -2,6 +2,7 @@ import random
 import json
 import pickle
 import numpy as np
+import os
 
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -85,5 +86,5 @@ hist = model.fit(
 )
 
 # Saves the model into a file and confirms that training is finished
-model.save("chatbotmodel.h5", hist)
+model.save(os.path.join("models", "chatbotmodel.h5"), hist)
 print("Finished training!")
