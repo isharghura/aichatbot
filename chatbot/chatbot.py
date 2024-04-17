@@ -54,14 +54,21 @@ def predict_class(sentence):
 
 # Generates a response based on the intent that was predicted
 def get_response(intents_list, intents_json):
-    tag = intents_list[0]['intent']
-    list_of_intents = intents_json['intents']
-    for intent in list_of_intents:
-        if intent['tag'] == tag:
-            result = random.choice(intent['responses'])
-            break
-    else:
-        result = "I'm sorry, I didn't understand that, ask me something else!"
-    return result
+    try:
+        if intents_list:
+            tag = intents_list[0]["intent"]
+            list_of_intents = intents_json["intents"]
+            for intent in list_of_intents:
+                if intent["tag"] == tag:
+                    result = random.choice(intent["responses"])
+                    return result
+            else:
+                return "I'm sorry, I didn't understand that, ask me something else!"
+        else:
+            return "I'm sorry, I didn't understand that, ask me something else!"
+    except Exception as e:
+        print("Unable to classify intent: ", e)
+        return "An error occurred while processing the request"
+
 
 print("Running!")
