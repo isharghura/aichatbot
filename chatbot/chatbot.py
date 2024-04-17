@@ -54,6 +54,7 @@ def predict_class(sentence):
 
 # Generates a response based on the intent that was predicted
 def get_response(intents_list, intents_json):
+    print(intents_list)
     try:
         if intents_list:
             tag = intents_list[0]["intent"]
