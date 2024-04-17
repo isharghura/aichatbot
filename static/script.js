@@ -3,16 +3,13 @@ const msgs = document.getElementById("msgs");
 
 // Adds a user message to the chat interface
 function addMsg() {
-    if (userInput.value === '') {
-        //do nothing
-    } else {
+    if (userInput.value === '') { }
+    else {
         let usrmsg = document.createElement("li");
         usrmsg.id = "user-msg";
         usrmsg.innerHTML = userInput.value;
-
         msgs.appendChild(usrmsg);
         userInput.value = '';
-
         setTimeout(function () {
             usrmsg.classList.add("show");
             sendUserInput(usrmsg.innerHTML);
@@ -33,7 +30,6 @@ document.addEventListener('keydown', (event) => {
     if (whichKey === 'Enter') {
         event.preventDefault();
         addMsg();
-
         scrollDown();
     }
 });
@@ -43,7 +39,6 @@ function getTime() {
     let today = new Date();
     hours = today.getHours();
     minutes = today.getMinutes();
-
     if (hours < 10) {
         hours = "0" + hours;
     }
@@ -59,13 +54,10 @@ function firstBotMessage() {
     let botmsg = document.createElement("li");
     botmsg.id = "bot-msg";
     botmsg.innerHTML = "Hi! How can I help you?";
-
     msgs.appendChild(botmsg);
-
     setTimeout(function () {
         botmsg.classList.add("show");
     }, 500);
-
     let time = document.getElementById("chat-timestamp");
     time.innerHTML = getTime();
 }
@@ -92,9 +84,7 @@ function displayBotResponse(response) {
     let botmsg = document.createElement("li");
     botmsg.id = "bot-msg";
     botmsg.innerHTML = response;
-
     msgs.appendChild(botmsg);
-
     setTimeout(function () {
         botmsg.classList.add("show");
         scrollDown();
